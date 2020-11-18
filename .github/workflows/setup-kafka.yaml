@@ -4,14 +4,14 @@ on:
     branches:
       - '**'
 
+env:
+  TOPIC_FILES: bidrag-kafka/topics/journalpost.yaml,bidrag-kafka/topics/vedtak.yaml
+
 jobs:
 
   setup-dev:
     runs-on: ubuntu-latest
     name: Set up kafka streams in dev
-
-    env:
-      TOPIC_FILES: bidrag-kafka/topics/journalpost.yaml,bidrag-kafka/topics/vedtak.yaml
 
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
           VAR: kafka-pool=nav-dev
-          RESOURCE: ${{ TOPIC_FILES }}
+          RESOURCE: ${{ env.TOPIC_FILES }}
 
   setup-prod:
     runs-on: ubuntu-latest
@@ -39,4 +39,4 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
           VAR: kafka-pool=nav-prod
-          RESOURCE: bidrag-kafka/topics/journalpost.yaml,bidrag-kafka/topics/vedtak.yaml
+          RESOURCE: ${{ env.TOPIC_FILES }}

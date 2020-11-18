@@ -1,0 +1,42 @@
+name: setup kafka streams
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+
+  setup-dev:
+    runs-on: ubuntu-latest
+    name: Set up kafka streams in dev
+
+    env:
+      TOPIC_FILES: bidrag-kafka/topics/journalpost.yaml,bidrag-kafka/topics/vedtak.yaml
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: use feature topic-files
+        if: github.ref != 'refs/heads/main'
+        run: echo TOPIC_FILES=bidrag-kafka/topics/journalpost-feature.yaml,bidrag-kafka/topics/vedtak-feature.yaml >> $GITHUB_ENV
+      - name: Setup kafka in dev-gcp
+        uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          VAR: kafka-pool=nav-dev
+          RESOURCE: ${{ TOPIC_FILES }}
+
+  setup-prod:
+    runs-on: ubuntu-latest
+    name: Set up kafka streams in prod
+    if: github.ref == 'refs/heads/release'
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up  to prod-gcp
+        uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: prod-gcp
+          VAR: kafka-pool=nav-prod
+          RESOURCE: bidrag-kafka/topics/journalpost.yaml,bidrag-kafka/topics/vedtak.yaml

@@ -12,6 +12,7 @@ jobs:
   setup-dev:
     runs-on: ubuntu-latest
     name: Set up kafka streams in dev
+    if: github.ref != 'refs/heads/release'
 
     steps:
       - uses: actions/checkout@v2

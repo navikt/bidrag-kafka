@@ -43,5 +43,4 @@ jobs:
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
-          VAR: kafka-pool=nav-prod
-          RESOURCE: ${{ env.TOPIC_FILES }}
+          RESOURCE: bidrag/topics/journalpost-prod.yaml,bidrag/topics/vedtak-prod.yaml

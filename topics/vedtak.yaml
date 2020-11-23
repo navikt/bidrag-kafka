@@ -3,12 +3,12 @@ kind: Topic
 metadata:
   annotations:
     kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
-  name: vedtak
+  name: {{ vedtak-name }}
   namespace: bidrag
   labels:
     team: bidrag
 spec:
-  pool: {{kafka-pool}}
+  pool: {{ kafka-pool }}
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 1

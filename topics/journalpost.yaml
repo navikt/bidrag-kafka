@@ -3,12 +3,12 @@ kind: Topic
 metadata:
   annotations:
     kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
-  name: journalpost
+  name: {{ journalpost-name }}
   namespace: bidrag
   labels:
     team: bidrag
 spec:
-  pool: {{kafka-pool}}
+  pool: {{ kafka-pool }}
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 1
@@ -17,9 +17,8 @@ spec:
     retentionBytes: -1
     retentionHours: 72
   acl:
+  {{#each acl}}
     - team: bidrag
-      application: bidrag-dokument-journalpost
-      access: readwrite
-    - team: bidrag
-      application: bidrag-dokument-testdata
-      access: read
+      application: {{@key}}
+      access: "{{this}}"
+  {{/each}}

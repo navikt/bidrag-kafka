@@ -1,0 +1,8 @@
+{
+  "journalpost-name": "journalpost-feature",
+  "kafka-pool": "nav-dev",
+  "acl": {
+    "bidrag-dokument-journalpost": "readwrite",
+    "bidrag-dokument-testdata": "read"
+  }
+}

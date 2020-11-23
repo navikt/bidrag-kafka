@@ -26,7 +26,6 @@ jobs:
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
-          VAR: kafka-pool=nav-dev
           RESOURCE: ${{ env.TOPIC_FILES }}
 
   setup-prod:

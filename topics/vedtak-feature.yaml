@@ -8,7 +8,7 @@ metadata:
   labels:
     team: bidrag
 spec:
-  pool: {{kafka-pool}}
+  pool: dev-gcp
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 1

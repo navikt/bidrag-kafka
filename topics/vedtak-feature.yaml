@@ -8,7 +8,7 @@ metadata:
   labels:
     team: bidrag
 spec:
-  pool: dev-gcp
+  pool: nav-dev
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 1
@@ -18,8 +18,8 @@ spec:
     retentionHours: 720
   acl:
     - team: bidrag
-      application: bidrag-dokument-journalpost
+      application: bidrag-dokument-journalpost-feature
       access: readwrite
     - team: bidrag
-      application: bidrag-dokument-testdata
+      application: bidrag-dokument-testdata-feature
       access: read

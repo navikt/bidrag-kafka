@@ -8,14 +8,14 @@ metadata:
   labels:
     team: bidrag
 spec:
-  pool: {{kafka-pool}}
+  pool: dev-gcp
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 1
     partitions: 1
     replication: 3
     retentionBytes: -1
-    retentionHours: 72
+    retentionHours: -1
   acl:
     - team: bidrag
       application: bidrag-dokument-journalpost

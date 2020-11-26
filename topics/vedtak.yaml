@@ -2,7 +2,8 @@ apiVersion: kafka.nais.io/v1
 kind: Topic
 metadata:
   annotations:
-    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
+    dcat.data.nav.no/title: Vedtak Hendelser
+    dcat.data.nav.no/description: Intern kø av hendelser på vedtak som oppstår i saksbehandlingen under team bidrag
   name: vedtak
   namespace: bidrag
   labels:

@@ -2,7 +2,8 @@ apiVersion: kafka.nais.io/v1
 kind: Topic
 metadata:
   annotations:
-    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
+    dcat.data.nav.no/title: Journalpost Hendelser
+    dcat.data.nav.no/description: Intern kø av hendelser som oppstår i saksbehandlingen av journalposter under team bidrag
   name: journalpost
   namespace: bidrag
   labels:

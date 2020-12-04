@@ -28,6 +28,31 @@ jobs:
           CLUSTER: dev-gcp
           RESOURCE: ${{ env.TOPIC_FILES }}
 
+  restarts:
+    runs-on: self-hosted
+    name: restart applications using kafka streams
+    needs: setup-dev
+
+    steps:
+      - run: kubectl config use-context dev-fss
+      - name: use applications in feature branch
+        if: github.ref != 'refs/heads/main'
+        run: echo NAIS_APPS="bidrag-dokument-journalpost-feature;bidrag-dokument-testdata-feature" >> $GITHUB_ENV
+      - name: use applications in main branch
+        if: github.ref == 'refs/heads/main'
+        run: echo NAIS_APPS="bidrag-dokument-journalpost;bidrag-dokument-testdata" >> $GITHUB_ENV
+      - name: restart applications
+        run: |
+          IFS=';' read -r -a APPS <<< "$NAIS_APPS"
+
+          for app in APPS
+          do
+            APP_PODS=$(kubectl get pods -n bidrag -l app=$app | awk '{print $1}' | grep -v NAME)
+            PODS=$(echo RESTART_PODS | sed 's;\n; ;')
+            kubectl delete pods -n bidrag $PODS
+            echo "Restarts $app, pods: $PODS"
+          done
+
   setup-prod:
     runs-on: ubuntu-latest
     name: Set up kafka streams in prod

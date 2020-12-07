@@ -40,10 +40,20 @@ jobs:
         run: |
           PODS=$(kubectl get pods -n bidrag -l app=bidrag-dokument-journalpost-feature  | awk '{print $1}' | grep -v NAME)
           kubectl delete pods -n bidrag $(echo $PODS | sed 's;\n; ;')
+      - name: restart bidrag-arbeidsflyt-feature
+        if: github.ref != 'refs/heads/main'
+        run: |
+          PODS=$(kubectl get pods -n bidrag -l app=bidrag-arbeidsflyt-feature  | awk '{print $1}' | grep -v NAME)
+          kubectl delete pods -n bidrag $(echo $PODS | sed 's;\n; ;')
       - name: restart bidrag-dokument-journalpost
         if: github.ref == 'refs/heads/main'
         run: |
           PODS=$(kubectl get pods -n bidrag -l app=bidrag-dokument-journalpost  | awk '{print $1}' | grep -v NAME)
+          kubectl delete pods -n bidrag $(echo $PODS | sed 's;\n; ;')
+      - name: restart bidrag-arbeidsflyt
+        if: github.ref == 'refs/heads/main'
+        run: |
+          PODS=$(kubectl get pods -n bidrag -l app=bidrag-arbeidsflyt  | awk '{print $1}' | grep -v NAME)
           kubectl delete pods -n bidrag $(echo $PODS | sed 's;\n; ;')
 
   setup-prod:

@@ -22,7 +22,7 @@ spec:
       application: bidrag-dokument-journalpost-feature
       access: readwrite
     - team: bidrag
-      application: bidrag-arbeidsflyt
+      application: bidrag-arbeidsflyt-feature
       access: read
     - team: bidrag
       application: bidrag-dokument-testdata-feature

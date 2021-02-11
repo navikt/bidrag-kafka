@@ -25,5 +25,5 @@ spec:
       application: bidrag-arbeidsflyt
       access: read
     - team: bidrag
-      application: bidrag-dokument-testdata
+      application: bidrag-testdata
       access: read

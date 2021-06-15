@@ -27,3 +27,6 @@ spec:
     - team: bidrag
       application: bidrag-testdata-feature
       access: read
+    - team: bidrag
+      application: bidrag-cucumber-gcp-feature
+      access: readwrite

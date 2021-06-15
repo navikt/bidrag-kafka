@@ -19,8 +19,8 @@ spec:
     retentionHours: 720
   acl:
     - team: bidrag
-      application: bidrag-dokument-journalpost-feature
+      application: bidrag-vedtak-feature
       access: readwrite
     - team: bidrag
-      application: bidrag-dokument-feature
+      application: bidrag-stonad-feature
       access: read

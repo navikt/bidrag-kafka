@@ -28,5 +28,5 @@ spec:
       application: bidrag-testdata-feature
       access: read
     - team: bidrag
-      application: bidrag-testdata-cloud-feature
+      application: bidrag-cucumber-cloud-feature
       access: write

@@ -22,6 +22,9 @@ spec:
       application: bidrag-dokument-journalpost
       access: readwrite
     - team: bidrag
+      application: bidrag-dokument-arkiv
+      access: write
+    - team: bidrag
       application: bidrag-arbeidsflyt
       access: read
     - team: bidrag

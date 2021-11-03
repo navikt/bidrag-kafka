@@ -28,24 +28,6 @@ jobs:
           CLUSTER: dev-gcp
           RESOURCE: ${{ env.TOPIC_FILES }}
 
-  restarts:
-    runs-on: self-hosted
-    name: restart applications using kafka streams
-    needs: setup-dev
-
-    steps:
-      - run: kubectl config use-context dev-fss
-      - name: restart bidrag-dokument-journalpost-feature
-        if: github.ref != 'refs/heads/main'
-        run: |
-          PODS=$(kubectl get pods -n bidrag -l app=bidrag-dokument-journalpost-feature  | awk '{print $1}' | grep -v NAME)
-          kubectl delete pods -n bidrag $(echo $PODS | sed 's;\n; ;')
-      - name: restart bidrag-dokument-journalpost
-        if: github.ref == 'refs/heads/main'
-        run: |
-          PODS=$(kubectl get pods -n bidrag -l app=bidrag-dokument-journalpost  | awk '{print $1}' | grep -v NAME)
-          kubectl delete pods -n bidrag $(echo $PODS | sed 's;\n; ;')
-
   setup-prod:
     runs-on: ubuntu-latest
     name: Set up kafka streams in prod

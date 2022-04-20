@@ -24,3 +24,6 @@ spec:
     - team: bidrag
       application: bidrag-stonad-feature
       access: read
+    - team: bidrag
+      application: bidrag-revurder-forskudd-data-feature
+      access: read

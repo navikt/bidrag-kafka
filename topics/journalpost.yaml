@@ -29,7 +29,7 @@ spec:
       access: read
     - team: bidrag
       application: bidrag-testdata
-      access: read
+      access: readwrite
     - team: bidrag
       application: bidrag-cucumber-cloud
       access: write

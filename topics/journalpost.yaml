@@ -33,3 +33,6 @@ spec:
     - team: bidrag
       application: bidrag-cucumber-cloud
       access: write
+    - team: bidrag
+      application: bidrag-cli
+      access: readwrite

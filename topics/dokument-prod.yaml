@@ -2,14 +2,14 @@ apiVersion: kafka.nais.io/v1
 kind: Topic
 metadata:
   annotations:
-    dcat.data.nav.no/title: Dokument Hendelser Q*
+    dcat.data.nav.no/title: Dokument Hendelser
     dcat.data.nav.no/description: Intern kø av hendelser som beskriver status på bidrag dokumenter
-  name: dokument-feature
+  name: dokument
   namespace: bidrag
   labels:
     team: bidrag
 spec:
-  pool: nav-dev
+  pool: nav-prod
   config:
     cleanupPolicy: delete
     minimumInSyncReplicas: 1
@@ -19,14 +19,11 @@ spec:
     retentionHours: 720
   acl:
     - team: bidrag
-      application: bidrag-dokument-journalpost-feature
+      application: bidrag-dokument-journalpost
       access: readwrite
     - team: bidrag
-      application: bidrag-dokument-bestilling-feature
+      application: bidrag-dokument-bestilling
       access: readwrite
     - team: bidrag
-      application: bidrag-dokument-forsendelse-feature
-      access: readwrite
-    - team: bidrag
-      application: bidrag-cli-feature
+      application: bidrag-dokument-forsendelse
       access: readwrite

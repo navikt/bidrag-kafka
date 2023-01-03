@@ -5,7 +5,7 @@ on:
       - '**'
 
 env:
-  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/vedtak.yaml
+  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/dokument-dev.yaml
 
 jobs:
 
@@ -15,12 +15,12 @@ jobs:
     if: github.ref != 'refs/heads/release'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           path: bidrag
       - name: use feature topic-files
         if: github.ref != 'refs/heads/main'
-        run: echo TOPIC_FILES=bidrag/topics/journalpost-feature.yaml,bidrag/topics/vedtak-feature.yaml >> $GITHUB_ENV
+        run: echo TOPIC_FILES=bidrag/topics/journalpost-feature.yaml,bidrag/topics/vedtak-feature.yaml,bidrag/topics/dokument-feature.yaml >> $GITHUB_ENV
       - name: Setup kafka in dev-gcp
         uses: nais/deploy/actions/deploy@v1
         env:
@@ -34,7 +34,7 @@ jobs:
     if: github.ref == 'refs/heads/release'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           path: bidrag
       - name: Set up  to prod-gcp
@@ -42,4 +42,4 @@ jobs:
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
-          RESOURCE: bidrag/topics/journalpost-prod.yaml,bidrag/topics/vedtak-prod.yaml
+          RESOURCE: bidrag/topics/journalpost-prod.yaml,bidrag/topics/vedtak-prod.yaml,bidrag/topics/vedtak-prod.yaml,bidrag/topics/dokument-prod.yaml

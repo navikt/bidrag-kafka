@@ -15,7 +15,7 @@ jobs:
     if: github.ref != 'refs/heads/release'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           path: bidrag
       - name: use feature topic-files
@@ -34,7 +34,7 @@ jobs:
     if: github.ref == 'refs/heads/release'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           path: bidrag
       - name: Set up  to prod-gcp

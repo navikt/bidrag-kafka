@@ -31,5 +31,5 @@ spec:
       application: bidrag-regnskap-feature
       access: read
     - team: bidrag
-      application: bidrag-kafka-manager-feature
+      application: bidrag-kafka-manager
       access: read

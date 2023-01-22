@@ -32,4 +32,4 @@ spec:
       access: read
     - team: bidrag
       application: bidrag-kafka-manager
-      access: read 
+      access: read

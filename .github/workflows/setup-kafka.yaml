@@ -20,7 +20,7 @@ jobs:
           path: bidrag
       - name: use feature topic-files
         if: github.ref != 'refs/heads/main'
-        run: echo TOPIC_FILES=bidrag/topics/journalpost-feature.yaml,bidrag/topics/vedtak-feature.yaml,bidrag/topics/dokument-feature.yaml >> $GITHUB_ENV
+        run: echo TOPIC_FILES=bidrag/topics/journalpost-feature.yaml,bidrag/topics/vedtak-feature.yaml,bidrag/topics/dokument-feature.yaml,bidrag/topics/sak-feature.yaml >> $GITHUB_ENV
       - name: Setup kafka in dev-gcp
         uses: nais/deploy/actions/deploy@v1
         env:

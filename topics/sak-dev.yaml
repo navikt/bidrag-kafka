@@ -4,7 +4,7 @@ metadata:
   annotations:
     dcat.data.nav.no/title: Sak Hendelser Q*
     dcat.data.nav.no/description: Intern kø av hendelser som inneholder detaljer på en bidrag sak
-  name: sak-feature
+  name: sak
   namespace: bidrag
   labels:
     team: bidrag

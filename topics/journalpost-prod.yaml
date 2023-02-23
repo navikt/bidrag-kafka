@@ -27,3 +27,9 @@ spec:
     - team: bidrag
       application: bidrag-arbeidsflyt
       access: read
+    - team: bidrag
+      application: bidrag-dokument-forsendelse
+      access: readwrite
+    - team: bidrag
+      application: bisys
+      access: read

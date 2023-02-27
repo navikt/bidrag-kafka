@@ -4,6 +4,7 @@ metadata:
   annotations:
     dcat.data.nav.no/title: Vedtak Hendelser
     dcat.data.nav.no/description: Intern kø av hendelser på vedtak som oppstår i saksbehandlingen under team bidrag
+    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
   name: vedtak-feature
   namespace: bidrag
   labels:

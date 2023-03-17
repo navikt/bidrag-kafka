@@ -28,5 +28,5 @@ spec:
       application: bisys
       access: readwrite
     - team: bidrag
-      application: bidrag-sak
+      application: bidrag-sak-feature
       access: readwrite

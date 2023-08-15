@@ -5,7 +5,7 @@ on:
       - '**'
 
 env:
-  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/dokument-dev.yaml,bidrag/topics/sak-dev.yaml
+  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/dokument-dev.yaml,bidrag/topics/sak-dev.yaml,bidrag/topics/vedtak-syntetisk.yaml
 
 jobs:
 

@@ -23,6 +23,9 @@ spec:
       application: bidrag-vedtak
       access: readwrite
     - team: bidrag
+      application: bidrag-behandling
+      access: read
+    - team: bidrag
       application: bidrag-stonad
       access: read
     - team: bidrag

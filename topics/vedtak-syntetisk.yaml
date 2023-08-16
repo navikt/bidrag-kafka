@@ -20,7 +20,7 @@ spec:
     retentionHours: 720
   acl:
     - team: bidrag
-      application: bidrag-vedtak
+      application: bidrag-vedtak-syntetisk
       access: readwrite
     - team: bidrag
       application: bidrag-behandling

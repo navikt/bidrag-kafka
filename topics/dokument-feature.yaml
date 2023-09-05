@@ -2,7 +2,7 @@ apiVersion: kafka.nais.io/v1
 kind: Topic
 metadata:
   annotations:
-    dcat.data.nav.no/title: Dokument Hendelser Q*
+    dcat.data.nav.no/title: Dokument Hendelser feature
     dcat.data.nav.no/description: Intern kø av hendelser som beskriver status på bidrag dokumenter
   name: dokument-feature
   namespace: bidrag
@@ -13,7 +13,7 @@ spec:
   config:
     cleanupPolicy: delete
     minimumInSyncReplicas: 1
-    partitions: 1
+    partitions: 2
     replication: 3
     retentionBytes: -1
     retentionHours: 720

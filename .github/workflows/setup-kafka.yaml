@@ -12,14 +12,27 @@ jobs:
   setup-dev:
     runs-on: ubuntu-latest
     name: Set up kafka streams in dev
-    if: github.ref != 'refs/heads/release'
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: bidrag
+      - name: Setup kafka in dev-gcp
+        uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: ${{ env.TOPIC_FILES }}
+
+  setup-feature:
+    runs-on: ubuntu-latest
+    name: Set up kafka streams in feature
 
     steps:
       - uses: actions/checkout@v3
         with:
           path: bidrag
       - name: use feature topic-files
-        if: github.ref != 'refs/heads/main'
         run: echo TOPIC_FILES=bidrag/topics/journalpost-feature.yaml,bidrag/topics/vedtak-feature.yaml,bidrag/topics/dokument-feature.yaml,bidrag/topics/sak-feature.yaml >> $GITHUB_ENV
       - name: Setup kafka in dev-gcp
         uses: nais/deploy/actions/deploy@v1
@@ -31,7 +44,7 @@ jobs:
   setup-prod:
     runs-on: ubuntu-latest
     name: Set up kafka streams in prod
-    if: github.ref == 'refs/heads/release'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v3

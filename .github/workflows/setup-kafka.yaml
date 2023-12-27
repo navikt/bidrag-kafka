@@ -12,10 +12,9 @@ jobs:
   setup-dev:
     runs-on: ubuntu-latest
     name: Set up kafka streams in dev
-    if: github.ref != 'refs/heads/release'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           path: bidrag
       - name: use feature topic-files
@@ -31,13 +30,13 @@ jobs:
   setup-prod:
     runs-on: ubuntu-latest
     name: Set up kafka streams in prod
-    if: github.ref == 'refs/heads/release'
+    if: github.ref == 'refs/heads/main'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           path: bidrag
-      - name: Set up  to prod-gcp
+      - name: Set up to prod-gcp
         uses: nais/deploy/actions/deploy@v1
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}

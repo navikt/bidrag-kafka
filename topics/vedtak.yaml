@@ -37,3 +37,6 @@ spec:
     - team: bidrag
       application: bidrag-kafka-manager
       access: read
+    - team: bidrag
+      application: bisys
+      access: read

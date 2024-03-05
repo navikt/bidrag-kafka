@@ -40,4 +40,4 @@ jobs:
         uses: nais/deploy/actions/deploy@v2
         env:
           CLUSTER: prod-gcp
-          RESOURCE: bidrag/topics/journalpost-prod.yaml,bidrag/topics/vedtak-prod.yaml,bidrag/topics/vedtak-prod.yaml,bidrag/topics/dokument-prod.yaml,bidrag/topics/sak-prod.yaml
+          RESOURCE: bidrag/topics/journalpost-prod.yaml,bidrag/topics/vedtak-prod.yaml,bidrag/topics/dokument-prod.yaml,bidrag/topics/sak-prod.yaml

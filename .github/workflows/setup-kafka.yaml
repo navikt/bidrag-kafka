@@ -6,9 +6,10 @@ on:
 
 env:
   TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/dokument-dev.yaml,bidrag/topics/sak-dev.yaml,bidrag/topics/vedtak-syntetisk.yaml
-
+permissions:
+  contents: "read"
+  id-token: "write"
 jobs:
-
   setup-dev:
     runs-on: ubuntu-latest
     name: Set up kafka streams in dev

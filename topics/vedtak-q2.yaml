@@ -27,6 +27,7 @@ spec:
       access: read
     - team: bidrag
       application: bidrag-stonad-q2
+      access: read
     - team: bidrag
       application: bidrag-regnskap-q2
       access: read

@@ -26,6 +26,9 @@ spec:
       application: bidrag-behandling-q2
       access: read
     - team: bidrag
+      application: bidrag-behandling
+      access: read
+    - team: bidrag
       application: bidrag-stonad-q2
       access: read
     - team: bidrag

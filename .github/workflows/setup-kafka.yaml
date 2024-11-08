@@ -5,7 +5,7 @@ on:
       - '**'
 
 env:
-  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/dokument-dev.yaml,bidrag/topics/sak-dev.yaml,bidrag/topics/vedtak-syntetisk.yaml,bidrag/topics/vedtak-q1.yaml,bidrag/topics/vedtak-q2.yaml,bidrag/topics/samhandler-q1.yaml,bidrag/topics/samhandler-q2
+  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/dokument-dev.yaml,bidrag/topics/sak-dev.yaml,bidrag/topics/vedtak-syntetisk.yaml,bidrag/topics/vedtak-q1.yaml,bidrag/topics/vedtak-q2.yaml,bidrag/topics/samhandler-q1.yaml,bidrag/topics/samhandler-q2.yaml
 permissions:
   contents: "read"
   id-token: "write"

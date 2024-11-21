@@ -38,6 +38,9 @@ spec:
       application: bidrag-regnskap
       access: read
     - team: bidrag
+      application: bidrag-regnskap-q1
+      access: read
+    - team: bidrag
       application: bidrag-kafka-manager
       access: read
     - team: bidrag

@@ -42,3 +42,6 @@ spec:
     - team: bidrag
       application: bisys
       access: read
+    - team: bidrag
+      application: bidrag-statistikk
+      access: read

@@ -18,6 +18,6 @@ spec:
     retentionBytes: -1
     retentionHours: -1
   acl:
-    - team: dvh
+    - team: dv-familie
       application: dvh-familie-konsument
       access: read

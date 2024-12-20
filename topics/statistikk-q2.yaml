@@ -22,3 +22,6 @@ spec:
     - team: dv-familie
       application: dvh-familie-konsument
       access: read
+    - team: bidrag
+      application: bidrag-kafka-manager
+      access: read

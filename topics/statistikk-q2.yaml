@@ -19,6 +19,9 @@ spec:
     retentionBytes: -1
     retentionHours: 720
   acl:
+    - team: bidrag
+      application: bidrag-statistikk-q2
+      access: readwrite
     - team: dv-familie
       application: dvh-familie-konsument
       access: read

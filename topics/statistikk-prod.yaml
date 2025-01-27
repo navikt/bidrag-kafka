@@ -4,6 +4,7 @@ metadata:
   annotations:
     dcat.data.nav.no/title: Vedtakshendelser statistikk
     dcat.data.nav.no/description: Intern kø av vedtakshendelser omformet og tilpasset behovet for statistikk, team bidrag
+    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
   name: statistikk
   namespace: bidrag
   labels:

@@ -35,7 +35,7 @@ spec:
       application: bidrag-regnskap-q2
       access: read
     - team: bidrag
-      application: bidrag-aldersjustering-q2
+      application: bidrag-automatisk-jobb-q2
       access: read
     - team: bidrag
       application: bidrag-kafka-manager

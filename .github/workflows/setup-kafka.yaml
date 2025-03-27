@@ -5,7 +5,7 @@ on:
       - '**'
 
 env:
-  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/journalpost-feature.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/vedtak-feature.yaml,bidrag/topics/dokument-dev.yaml,bidrag/topics/dokument-feature.yaml,bidrag/topics/sak-dev.yaml,bidrag/topics/sak-feature.yaml,bidrag/topics/vedtak-syntetisk.yaml,bidrag/topics/vedtak-q1.yaml,bidrag/topics/vedtak-q2.yaml,bidrag/topics/vedtak-q4.yaml,bidrag/topics/samhandler-q1.yaml,bidrag/topics/samhandler-q2.yaml,bidrag/topics/samhandler-q4.yaml,bidrag/topics/statistikk-q2.yaml
+  TOPIC_FILES: bidrag/topics/journalpost.yaml,bidrag/topics/journalpost-feature.yaml,bidrag/topics/vedtak.yaml,bidrag/topics/vedtak-feature.yaml,bidrag/topics/dokument-dev.yaml,bidrag/topics/dokument-feature.yaml,bidrag/topics/sak-dev.yaml,bidrag/topics/sak-feature.yaml,bidrag/topics/vedtak-syntetisk.yaml,bidrag/topics/vedtak-q1.yaml,bidrag/topics/vedtak-q2.yaml,bidrag/topics/vedtak-q4.yaml,bidrag/topics/samhandler-q1.yaml,bidrag/topics/samhandler-q2.yaml,bidrag/topics/samhandler-q4.yaml,bidrag/topics/statistikk-q2.yaml,bidrag/topics/vedtaksforslag.yaml,bidrag/topics/vedtaksforslag-syntetisk.yaml,bidrag/topics/vedtaksforslag-q1.yaml,bidrag/topics/vedtaksforslag-q2.yaml,bidrag/topics/vedtaksforslag-q4.yaml
 permissions:
   contents: "read"
   id-token: "write"
@@ -37,4 +37,4 @@ jobs:
         uses: nais/deploy/actions/deploy@v2
         env:
           CLUSTER: prod-gcp
-          RESOURCE: bidrag/topics/journalpost-prod.yaml,bidrag/topics/vedtak-prod.yaml,bidrag/topics/dokument-prod.yaml,bidrag/topics/sak-prod.yaml,bidrag/topics/samhandler-prod.yaml,bidrag/topics/statistikk-prod.yaml
+          RESOURCE: bidrag/topics/journalpost-prod.yaml,bidrag/topics/vedtak-prod.yaml,bidrag/topics/dokument-prod.yaml,bidrag/topics/sak-prod.yaml,bidrag/topics/samhandler-prod.yaml,bidrag/topics/statistikk-prod.yaml,bidrag/topics/vedtaksforslag-prod.yaml

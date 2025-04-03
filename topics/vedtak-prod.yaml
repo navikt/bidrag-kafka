@@ -45,3 +45,6 @@ spec:
     - team: bidrag
       application: bidrag-statistikk
       access: read
+    - team: bidrag
+      application: bidrag-stonad-temp
+      access: read

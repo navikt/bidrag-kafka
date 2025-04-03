@@ -5,7 +5,7 @@ metadata:
     dcat.data.nav.no/title: Vedtak Hendelser
     dcat.data.nav.no/description: Intern kø av hendelser på vedtak som oppstår i saksbehandlingen under team bidrag
     kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
-  name: vedtak-q1
+  name: vedtak-q2
   namespace: bidrag
   labels:
     team: bidrag
@@ -20,19 +20,22 @@ spec:
     retentionHours: 720
   acl:
     - team: bidrag
-      application: bidrag-vedtak-q1
+      application: bidrag-vedtak-q2
       access: readwrite
     - team: bidrag
-      application: bidrag-behandling-q1
+      application: bidrag-behandling-q2
       access: read
     - team: bidrag
-      application: bidrag-stonad-q1
+      application: bidrag-behandling
       access: read
     - team: bidrag
-      application: bidrag-regnskap-q1
+      application: bidrag-stonad-q2
       access: read
     - team: bidrag
-      application: bidrag-automatisk-jobb-q1
+      application: bidrag-regnskap-q2
+      access: read
+    - team: bidrag
+      application: bidrag-automatisk-jobb-q2
       access: read
     - team: bidrag
       application: bidrag-kafka-manager
@@ -44,5 +47,5 @@ spec:
       application: bidrag-cli
       access: readwrite
     - team: bidrag
-      application: bidrag-stonad-temp-q1
+      application: bidrag-statistikk-q2
       access: read

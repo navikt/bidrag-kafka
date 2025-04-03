@@ -49,3 +49,6 @@ spec:
     - team: bidrag
       application: bidrag-statistikk-q2
       access: read
+    - team: bidrag
+      application: bidrag-stonad-temp-q2
+      access: read

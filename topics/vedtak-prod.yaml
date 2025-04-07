@@ -46,5 +46,8 @@ spec:
       application: bidrag-statistikk
       access: read
     - team: bidrag
+      application: bidrag-cli
+      access: readwrite
+    - team: bidrag
       application: bidrag-stonad-temp
       access: read

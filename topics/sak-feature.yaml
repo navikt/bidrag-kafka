@@ -19,7 +19,7 @@ spec:
     retentionHours: 720
   acl:
     - team: bidrag
-      application: bidrag-cli-feature
+      application: bidrag-cli
       access: readwrite
     - team: bidrag
       application: bidrag-kafka-manager

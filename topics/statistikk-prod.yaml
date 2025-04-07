@@ -27,3 +27,6 @@ spec:
     - team: bidrag
       application: bidrag-kafka-manager
       access: readwrite
+    - team: bidrag
+      application: bidrag-cli
+      access: readwrite

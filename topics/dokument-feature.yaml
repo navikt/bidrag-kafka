@@ -28,7 +28,7 @@ spec:
       application: bidrag-dokument-forsendelse-feature
       access: readwrite
     - team: bidrag
-      application: bidrag-cli-feature
+      application: bidrag-cli
       access: readwrite
     - team: bidrag
       application: bidrag-kafka-manager

@@ -36,3 +36,6 @@ spec:
     - team: bidrag
       application: bisys
       access: readwrite
+    - team: bidrag
+      application: bidrag-behandling-q1
+      access: readwrite

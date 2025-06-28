@@ -39,3 +39,6 @@ spec:
     - team: bidrag
       application: bidrag-cli
       access: readwrite
+    - team: bidrag
+      application: bidrag-behandling
+      access: readwrite

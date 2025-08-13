@@ -51,3 +51,6 @@ spec:
     - team: bidrag
       application: bidrag-belopshistorikk
       access: read
+    - team: bidrag
+      application: bidrag-bidragskalkulator-api
+      access: read

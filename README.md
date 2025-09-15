@@ -10,7 +10,7 @@ Følg denne [guiden](https://doc.nais.io/cli/commands/aiven/) for å koble deg t
 
 Det er satt opp egen kafka-ACL for å koble deg til bidrag-journalpost-topic fra maksinen som heter `bidrag-cli` og `bidrag-cli-feature`.
 
-Kjør følgende kommandoer
+Kjør følgende kommandoer:
 ```bash
 nais aiven create kafka bidrag-cli-feature bidrag -s bidrag-kafka-cli-feature
 ## Hent path fra følgende kommando

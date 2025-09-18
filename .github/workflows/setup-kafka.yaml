@@ -1,5 +1,6 @@
 name: setup kafka streams
 on:
+  workflow_dispatch:
   push:
     branches:
       - '**'

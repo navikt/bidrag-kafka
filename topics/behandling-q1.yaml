@@ -20,7 +20,7 @@ spec:
   acl:
     - team: bidrag
       application: bidrag-arbeidsflyt-feature
-      access: read
+      access: readwrite
     - team: bidrag
       application: bidrag-bbm-feature
       access: readwrite
@@ -29,7 +29,7 @@ spec:
       access: readwrite
     - team: bidrag
       application: bisys
-      access: read
+      access: readwrite
     - team: bidrag
       application: bidrag-kafka-manager
-      access: read
+      access: readwrite

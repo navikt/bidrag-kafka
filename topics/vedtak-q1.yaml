@@ -49,3 +49,6 @@ spec:
     - team: bidrag
       application: bidrag-bidragskalkulator-api
       access: read
+    - team: bidrag
+      application: bidrag-arbeidsflyt-feature
+      access: read

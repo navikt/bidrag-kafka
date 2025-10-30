@@ -28,7 +28,7 @@ spec:
       application: bisys
       access: readwrite
     - team: bidrag
-      application: bidrag-sak-feature
+      application: bidrag-sak-q1
       access: readwrite
     - team: bidrag
       application: bidrag-bidragskalkulator-api

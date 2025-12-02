@@ -16,7 +16,7 @@ jobs:
     name: Set up kafka streams in dev
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           path: bidrag
       - name: Setup kafka in dev-gcp
@@ -31,7 +31,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           path: bidrag
       - name: Set up to prod-gcp

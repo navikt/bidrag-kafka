@@ -31,5 +31,8 @@ spec:
       application: bidrag-sak
       access: readwrite
     - team: bidrag
+      application: bidrag-sak-q2
+      access: readwrite
+    - team: bidrag
       application: bidrag-bidragskalkulator-api
       access: read
